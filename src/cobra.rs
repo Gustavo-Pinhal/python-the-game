@@ -1,6 +1,5 @@
 use std::collections::LinkedList;
 use piston_window::{Context, G2d};
-use piston_window::types::Color;
 
 use crate::draw::desenhar_bloco;
 use crate::constantes;
@@ -16,7 +15,7 @@ pub enum Direcao {
 
 impl Direcao {
     //Retorna a direção oposta
-    pub fn opposite(&self) -> Direcao {
+    pub fn oposto(&self) -> Direcao {
         match *self {
             Direcao::Up => Direcao::Down,
             Direcao::Down => Direcao::Up,
@@ -150,7 +149,7 @@ impl Cobra {
     }
 
     //Retorna true caso a cabeça encontre a cauda, falso caso contrário
-    pub fn overlap_tail(&self, x: i32, y: i32) -> bool {
+    pub fn sobrepoe_cauda(&self, x: i32, y: i32) -> bool {
         let mut ch = 0;
         //Itera pelo corpo da cobra e identifica se a cabeça está no mesmo bloco
         for bloco in &self.corpo {

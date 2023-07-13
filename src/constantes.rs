@@ -1,4 +1,4 @@
-use piston_window::types::Color;
+use piston_window::{types::Color, Key};
 
 //Constantes gameplay
 pub const PERIODO_MOVIMENTO: f64 = 0.20 ;
@@ -13,3 +13,9 @@ pub const COR_GAMEOVER: Color = [0.90, 0.00, 0.00, 0.5];
 
 //Desenho
 pub const TAMANHO_BLOCO: f64 = 20.0;
+
+//Teclas de movimentação
+pub const MOV_UP: Key = Key::W;
+pub const MOV_DOWN: Key = Key::S;
+pub const MOV_LEFT: Key = Key::D;
+pub const MOV_RIGHT: Key = Key::A;
