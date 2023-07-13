@@ -1,5 +1,4 @@
 use piston_window::*;
-use piston_window::types::Color;
 
 use std::collections::LinkedList;
 
@@ -40,7 +39,7 @@ impl Game {
     }
 
     //Verifica a direção do botão e update a direção da cobra
-    pub fn key_pressed(&mut self, key: Key) {
+    pub fn tecla_pressionada(&mut self, key: Key) {
         if self.game_over {
             return;
         }
